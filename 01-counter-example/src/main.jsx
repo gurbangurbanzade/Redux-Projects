@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
+import { applyMiddleware, createStore } from "redux";
 import App from "./App";
 import "./index.css";
-import { createStore } from "redux";
-import { reducerCount } from "./components/02-counter/redux/reducers";
-const store = createStore(reducerCount);
+import { reducer } from "./components/05-applyMiddleware/reducer/index";
+
+const store = createStore(reducer);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
